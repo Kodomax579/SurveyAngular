@@ -1,0 +1,20 @@
+@if(questions())
+{
+    @for(question of questions();track $index)
+    {
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{question.question}}</mat-card-title>
+            </mat-card-header>
+        
+        <mat-card-actions>
+          <button mat-button>{{question.answerOne}}</button>
+          <button mat-button>{{question.answerTwo}}</button>
+          <button mat-button>{{question.answerThree}}</button>
+          <button mat-button>{{question.answerFour}}</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+}
+  
