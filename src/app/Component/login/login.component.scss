@@ -1,0 +1,62 @@
+form {
+    width: 300px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input {
+        width: calc(100% - 20px); // Damit links und rechts jeweils 10px Platz bleibt
+        padding: 8px;
+        margin: 0 10px; // Gleicher Abstand links und rechts
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box; // Sorgt dafür, dass Padding und Border die Breite nicht beeinflussen
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px;
+        width: calc(100% - 20px); // Auch hier links und rechts gleicher Abstand
+        margin: 15px 10px 0 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: #0056b3;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './Component/login/login.component';
 import { SurveyBoxComponent } from './Component/survey-box/survey-box.component';
 import { User } from './Model/user.model';
@@ -8,7 +7,7 @@ import { Questions } from './Model/questions.model';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,LoginComponent,SurveyBoxComponent],
+  imports: [LoginComponent,SurveyBoxComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,6 +21,7 @@ export class AppComponent {
   isAnUser(isUser:User)
   {
     this._isUser.set(isUser);
+    console.log(this._isUser())
     this.surveyService.setSchoolclass(isUser.schoolclass);
 
     this.surveyService.surveys().subscribe({

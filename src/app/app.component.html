@@ -5,5 +5,18 @@
 }
 @else 
 {
-    <app-survey-box [questions]='surveyQuestions()'></app-survey-box>
+    <nav class="navbar">
+        <div class="logo">Survey</div>
+        <div class="user">
+          <a class="username">
+            {{this._isUser()?.firstName}} {{this._isUser()?.lastName}} 
+          </a>
+        </div>
+    </nav>
+
+    <app-survey-box [questions]="surveyQuestions()"></app-survey-box>
+
+    <footer class="footer">
+        &copy; 2025 MeineApp. Alle Rechte vorbehalten.
+    </footer>
 }

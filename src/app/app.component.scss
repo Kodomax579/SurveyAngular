@@ -1,0 +1,59 @@
+// Allgemeine Variablen für Farben
+$primary-color: #007bff;
+$secondary-color: #ffffff;
+$bg-color: #f8f9fa;
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+// Navbar Styling
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: $primary-color;
+    color: $secondary-color;
+    
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .username {
+            font-size: 16px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid $secondary-color;
+        }
+    }
+}
+
+// Footer Styling
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: $bg-color;
+    color: #333;
+    bottom: 0;
+    width: 100%;
+}
+
+// Simulierter Inhalt (für Platzhalter)
+.content {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
