@@ -4,10 +4,11 @@ import { SurveyBoxComponent } from './Component/survey-box/survey-box.component'
 import { User } from './Model/user.model';
 import { SurveyService } from './Service/survey.service';
 import { Questions } from './Model/questions.model';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent,SurveyBoxComponent],
+  imports: [LoginComponent,SurveyBoxComponent,RouterLink,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
