@@ -25,19 +25,25 @@ body {
   }
   
   /* Logo bleibt links */
-  .navbar .logo {
+  .navbar .logo a {
     font-size: 24px;
     font-weight: bold;
-    color: #ecf0f1;
+    color: #ecf0f1; /* Gleiche Farbe wie die Navbar */
     letter-spacing: 2px;
     text-transform: uppercase;
-  }
+    text-decoration: none; /* Entfernt den Unterstrich */
+    transition: color 0.3s ease;
+}
+
+.navbar .logo a:hover {
+    color: #3498db; /* Farbe beim Hover */
+}
   
   /* Reiterbereich nach links verschieben */
   .navbar .nav-links {
     display: flex;
     align-items: center;
-    margin-left: 0; /* Setzt den Abstand auf 0, damit die Reiter links sind */
+    margin-left: 1em; /* Setzt den Abstand auf 0, damit die Reiter links sind */
     gap: 15px;
   }
   
@@ -94,7 +100,11 @@ body {
   .add-user-button:hover {
     background-color: #2ecc71;
   }
-  
+  .container {
+    margin-top: 80px; /* Mindestens Höhe der Navbar + extra Abstand */
+    padding: 20px;
+    flex: 1;
+}
   
   /* Footer Design */
   .footer {
@@ -116,4 +126,3 @@ body {
   .footer a:hover {
     color: #3498db;
   }
-  

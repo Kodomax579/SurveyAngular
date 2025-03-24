@@ -7,14 +7,15 @@ export const routes: Routes = [
         path:'',
         redirectTo:'Survey',
         pathMatch:'full'
-
     },
     {
         path:'AddNewUser',
-        component:NewUserComponent
+        component:NewUserComponent,
+
     },
     {
         path:'Survey',
-        component:SurveyBoxComponent
+        component:SurveyBoxComponent,
+        
     }
 ];

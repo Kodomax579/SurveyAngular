@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { Questions } from '../../Model/questions.model';
+import { SurveyService } from '../../Service/survey.service';
 
 @Component({
   selector: 'app-survey-box',
@@ -11,7 +12,19 @@ import { Questions } from '../../Model/questions.model';
 })
 export class SurveyBoxComponent 
 {
-  public questions = input.required<Questions[] | undefined>();
+  public questions = signal<Questions[] | undefined>(undefined)
+
+  private surveyService = inject(SurveyService);
+
+  ngOnInit()
+  {
+    this.surveyService.surveys().subscribe({
+      next:(value) =>
+      {
+        this.questions.set(value);
+      }
+    })
+  }
 
   get Questions()
   {

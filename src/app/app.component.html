@@ -8,9 +8,11 @@
 {
   <body>
     <div class="navbar">
+
         <div class="logo">
-          <a routerLink="Survey">Survey</a>
+          <a id="header" [routerLink]="'Survey'">Survey</a>
         </div>
+
         <div class="nav-links">
             <a class="nav-item username">
                 {{ _isUser()?.firstName }} {{ _isUser()?.lastName }}
@@ -19,7 +21,6 @@
             {
               <a class="add-user-button" routerLink="AddNewUser">
                   <i class="fas fa-user-plus"></i> Add User
-
               </a>
             }
             @if(_isUser()?.role === 0 || _isUser()?.role===2)
@@ -29,9 +30,10 @@
             
             <a class="nav-item">View Questions</a>
         </div>
+
     </div>
     <div class="container">
-      <router-outlet></router-outlet>
+      <router-outlet ></router-outlet>
     </div>
 
     <footer class="footer">
