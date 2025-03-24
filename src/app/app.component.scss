@@ -1,59 +1,119 @@
-// Allgemeine Variablen für Farben
-$primary-color: #007bff;
-$secondary-color: #ffffff;
-$bg-color: #f8f9fa;
-
+/* Global Styles */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-}
-
-// Navbar Styling
-.navbar {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  /* Navbar Design */
+  .navbar {
+    display: flex;
+    justify-content: flex-start; /* Startet das Flexbox Layout von der linken Seite */
     align-items: center;
-    padding: 15px 20px;
-    background: $primary-color;
-    color: $secondary-color;
-    
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .username {
-            font-size: 16px;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid $secondary-color;
-        }
-    }
-}
-
-// Footer Styling
-.footer {
-    text-align: center;
-    padding: 15px;
-    background: $bg-color;
-    color: #333;
-    bottom: 0;
+    padding: 20px 40px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
     width: 100%;
-}
-
-// Simulierter Inhalt (für Platzhalter)
-.content {
-    min-height: 80vh;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+  }
+  
+  /* Logo bleibt links */
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Reiterbereich nach links verschieben */
+  .navbar .nav-links {
     display: flex;
-    justify-content: center;
     align-items: center;
-}
+    margin-left: 0; /* Setzt den Abstand auf 0, damit die Reiter links sind */
+    gap: 15px;
+  }
+  
+  /* Navigation Links */
+  .nav-item {
+    font-size: 16px;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Username und Avatar */
+  .username {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ecf0f1;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Add User Button */
+  .add-user-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-user-button:hover {
+    background-color: #2ecc71;
+  }
+  
+  
+  /* Footer Design */
+  .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 40px;
+    text-align: center;
+    position: relative; /* Normal position */
+    width: 100%;
+  }
+  
+  .footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #3498db;
+  }
+  

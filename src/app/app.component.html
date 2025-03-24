@@ -5,18 +5,32 @@
 }
 @else 
 {
-    <nav class="navbar">
+  <body>
+    <div class="navbar">
         <div class="logo">Survey</div>
-        <div class="user">
-          <a class="username">
-            {{this._isUser()?.firstName}} {{this._isUser()?.lastName}} 
-          </a>
-        </div>
-    </nav>
+        <div class="nav-links">
+            <a class="nav-item username">
+                {{ _isUser()?.firstName }} {{ _isUser()?.lastName }}
+            </a>
 
-    <app-survey-box [questions]="surveyQuestions()"></app-survey-box>
+            <!-- Neuer Reiter: Benutzer hinzufügen -->
+            <a class="add-user-button" >
+                <i class="fas fa-user-plus"></i> Add User
+            </a>
+
+            <!-- Neuer Reiter: Alle Fragen anzeigen -->
+            <a class="nav-item">View Questions</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <app-survey-box [questions]="surveyQuestions()"></app-survey-box>
+    </div>
 
     <footer class="footer">
-        &copy; 2025 MeineApp. Alle Rechte vorbehalten.
+        &copy; 2025 MeineApp. Alle Rechte vorbehalten. | <a href="#">Impressum</a>
     </footer>
+</body>
+
+  
 }
