@@ -16,7 +16,7 @@ export class LoginServiceService {
     const params = new HttpParams()
       .set('email', this.email())
       .set('password', this.password());
-
+      
     return this.httpClient.get<User>('https://localhost:7156/api/User/single', { params });
   }
 

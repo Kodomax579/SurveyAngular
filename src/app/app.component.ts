@@ -4,7 +4,7 @@ import { SurveyBoxComponent } from './Component/survey-box/survey-box.component'
 import { User } from './Model/user.model';
 import { SurveyService } from './Service/survey.service';
 import { Questions } from './Model/questions.model';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +16,14 @@ export class AppComponent {
   title = 'Survey';
   _isUser = signal<User | undefined>(undefined);
 
-  constructor(private readonly surveyService : SurveyService){}
+  constructor(private readonly surveyService : SurveyService, private readonly route: Router){}
 
   isAnUser(isUser:User)
   {
     this._isUser.set(isUser);
     console.log(this._isUser())
     this.surveyService.setSchoolclass(isUser.schoolclass);
+    this.route.navigate(['/Survey']);
   }
 
   
